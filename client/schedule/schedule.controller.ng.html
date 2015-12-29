@@ -1,0 +1,59 @@
+<div layout="row" layout-padding ng-cloak>
+
+    <div flex="">
+        <md-card ng-cloak>
+          <md-toolbar class="md-hue-4" layout-align="center center">
+                <div class="md-toolbar-tools">  <h2><span>Schedule</span></h2> </div>
+          </md-toolbar>
+            <md-card-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Lectures">
+                        <md-content class="md-padding">
+                            <md-list>
+                                <!-- <md-subheader class="md-no-sticky">3 line item</md-subheader> -->
+                                <md-list-item class="md-3-line" ng-repeat="item in schedule">
+                                    <div class="md-list-item-text" layout="row">
+                                        <h4 flex="20" class="gray">{{ item.date }}</h4>
+                                        <h3 flex=""> <a href="{{ item.lecture_notes }}">{{ item.title }}</a></h3>
+                                       <h4 flex="30">{{ item.lecturer}}</h4>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Recitations">
+                        <md-content class="md-padding">
+                            <!-- <h1 class="md-display-2">Map</h1> -->
+                            <md-list>
+                                <!-- <md-subheader class="md-no-sticky">3 line item</md-subheader> -->
+ <md-list-item class="md-3-line" ng-repeat="item in recitations">
+                                    <div class="md-list-item-text" layout="row">
+                                        <h4 flex="20">{{ item.date }}</h4>
+                                        <h3 flex=""><a href="{{ item.lecture_notes }}">{{ item.title }}</a></h3>
+                                       <h4 flex="30">{{ item.lecturer}}</h4>
+
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Bootcamps">
+                        <md-content class="md-padding">
+                            <!-- <h1 class="md-display-2">Map</h1> -->
+                            <md-list>
+                                <!-- <md-subheader class="md-no-sticky">3 line item</md-subheader> -->
+ <md-list-item class="md-3-line" ng-repeat="item in bootcamps">
+                                    <div class="md-list-item-text" layout="row">
+                                        <h4 flex="20">{{ item.date }}</h4>
+                                        <h3 flex="50"><a href="{{ item.lecture_notes }}">{{ item.title }}</a></h3>
+                                       <h4 flex="30">{{ item.lecturer}}</h4>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

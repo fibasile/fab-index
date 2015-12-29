@@ -1,0 +1,17 @@
+.student_tile {
+
+  border: 1px solid #ccc;
+  /*background-size:contain;*/
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: 100% auto;
+}
+
+.icon-large{
+  width: 64px;
+  height: 64px;
+}
+.student_tile md-grid-tile-footer{
+  /*background-color: rgb(161,136,127);*/
+  background-color: rgba(60,60,60,.8);
+}

@@ -1,0 +1,20 @@
+<div layout="row" layout-padding ng-cloak>
+    <div flex="">
+        <md-card ng-cloak>
+            <md-toolbar class="md-hue-4" layout-align="center center">
+                <div class="md-toolbar-tools">
+                    <h2><span>Instructors</span></h2> </div>
+            </md-toolbar>
+            <md-card-content>
+                <md-grid-list md-cols-xs="1" md-cols-md="3" md-cols-gt-md="6" md-row-height="200px" md-gutter="13px">
+                    <md-grid-tile class="student_tile" ng-repeat="instructor in instructors  | orderBy:'name'" style=" background-image: url({{ instructor.picture }})">
+                        <!-- <md-icon class="icon-large" md-svg-src="/images/user.svg" ></md-icon> -->
+                        <md-grid-tile-footer>
+                            <h3><a style="color: white; text-decoration: none" href="{{ instructor.dir }}/">{{ instructor.name }} <br>{{ instructor.lab}}</a></h3>
+                        </md-grid-tile-footer>
+                    </md-grid-tile>
+                </md-grid-list>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

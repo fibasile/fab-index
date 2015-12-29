@@ -1,0 +1,45 @@
+{
+    "tutorials": [{
+        "title": "Week 1: Principles &amp; Practices, Project Management",
+        "src": "/data/2015/tutorials/week1.md"
+    }, {
+        "title": "Week 2: Computer Aided Design",
+        "src": "/data/2015/tutorials/week2.md"
+    }, {
+        "title": "Week 3: Computer-Controlled Cutting<",
+        "src": "/data/2015/tutorials/week3.md"
+    }, {
+        "title": "Week 4: Electronics Production",
+        "src": "/data/2015/tutorials/week4.md"
+    }, {
+        "title": "Week 5: 3D scanning and printing ",
+        "src": "/data/2015/tutorials/week5.md"
+    }, {
+        "title": "Week 6: Electronics Design",
+        "src": "/data/2015/tutorials/week6.md"
+    }, {
+        "title": "Week 7: Embedded Programming",
+        "src": "/data/2015/tutorials/week7.md"
+    }, {
+        "title": "Week 8: Computer-controlled machining",
+        "src": "/data/2015/tutorials/week8.md"
+    }, {
+        "title": "Week 9: Molding and Casting",
+        "src": "/data/2015/tutorials/week9.md"
+    }, {
+        "title": "Week 10: Input Devices",
+        "src": "/data/2015/tutorials/week10.md"
+    }, {
+        "title": "Week 13: Networking and communications",
+        "src": "/data/2015/tutorials/week13.md"
+    }, {
+        "title": "Week 14: Interface Programming",
+        "src": "/data/2015/tutorials/week14.md"
+    }, {
+        "title": "Week 16: Machine Building",
+        "src": "/data/2015/tutorials/week15.md"
+    }, {
+        "title": "Bonus: Visualization",
+        "src": "/data/2015/tutorials/bonus.md"
+    }]
+}

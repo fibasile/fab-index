@@ -1,0 +1,20 @@
+<md-card ng-cloak>
+<md-card-content>
+
+<md-list>
+      <md-subheader class="md-no-sticky">Class of {{title}}</md-subheader>
+      <md-list-item class="md-2-line" ng-repeat="item in actions">
+      <!--   <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+       -->
+       <!-- <md-icon class="icon_home" aria-label="Home"></md-icon> -->
+         <div class="md-list-item-text" layout="column">
+
+          <a class="menuitem" ui-sref="{{ item.code }}">{{ item.title }}</a>
+          <!-- <h4>{{ item.label }}</h4> -->
+        </div>
+      </md-list-item>
+      <!-- <md-divider ></md-divider> -->
+
+</md-list>
+</md-card-content>
+</md-card>

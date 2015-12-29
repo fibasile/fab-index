@@ -1,0 +1,32 @@
+var Schemas = {};
+
+
+Schemas.Student = new SimpleSchema({
+	name: { 
+		type: String,
+        label: "Full Name",
+        max: 200
+	},
+	site_url: { 
+		type: String,
+        label: "Site URL",
+        max: 200
+	},
+	fablabs_io_url: {
+		type: String,
+        label: "FabLabs.io URN",
+        max: 200
+	},
+	avatar_url: { 
+		type: String,
+        label: "Avatar URL",
+        max: 200
+	},
+	cover_url: { 
+		type: String,
+        label: "Cover URL",
+        max: 200
+	}
+});
+
+Students.attachSchema(Schemas.Student);

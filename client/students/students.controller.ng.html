@@ -1,0 +1,78 @@
+<div layout="row" layout-md="wrap" layout-padding ng-cloak>
+    <div flex="">
+        <md-card ng-cloak>
+            <md-toolbar class="md-hue-4">
+                <div class="md-toolbar-tools">
+                    <h2><span>Students</span></h2>
+                    <span flex=""></span>
+                    <md-button class="md-icon-button" aria-label="More">
+                        <md-icon md-svg-icon="images/random.svg"></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-card-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="All">
+                        <md-content class="md-padding">
+                            <md-grid-list md-cols-xs="1" md-cols-md="3" md-cols-gt-md="6" md-row-height="200px" md-gutter="13px">
+                                <md-grid-tile class="student_tile" ng-repeat="student in students  | orderBy:'student'" style=" background-image: url(http://fabacademy.org/archives/2015/students/{{ student.dir }}/presentation.png)">
+                                    <!-- <md-icon class="icon-large" md-svg-src="/images/user.svg" ></md-icon> -->
+                                    <md-grid-tile-footer>
+                                        <h3><a style="color: white; text-decoration: none" href="http://fabacademy.org/archives/2015/students/{{ student.dir }}/">{{ student.student }}</a></h3>
+                                    </md-grid-tile-footer>
+                                </md-grid-tile>
+                            </md-grid-list>
+                            <!-- <h1 class="md-display-2">All sites</h1> -->
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="By Lab">
+                        <md-content class="md-padding">
+                            <!-- <h1 class="md-display-2">All sites</h1> -->
+                            <div layout="row">
+                                <div>
+                                    <h2 class="md-header" ng-hide="selectedLab == 'all'">{{selectedLab}}</h2>
+                                </div>
+                                <span flex></span>
+                                <div>
+                                    <md-input-container>
+                                        <label> Select a lab </label>
+                                        <md-select ng-model="selectedLab">
+                                            <md-option value="all">All labs</md-option>
+                                            <md-option ng-repeat="lab in labs">{{lab}}</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                            </div>
+                            <md-divider></md-divider>
+                            <md-grid-list ng-hide="selectedLab == 'all'" md-col-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6" md-row-height="200px" md-gutter="13px">
+                                <md-grid-tile class="student_tile" ng-repeat="student in studentsByLab(selectedLab)  | orderBy:'student'" style="background-image: url(http://fabacademy.org/archives/2015/students/{{ student.dir }}/presentation.png)">
+                                    <!-- <md-icon class="icon-large" md-svg-src="/images/user.svg" ></md-icon> -->
+                                    <md-grid-tile-footer>
+                                        <h3><a style="color: white; text-decoration: none" href="http://fabacademy.org/archives/2015/students/{{ student.dir }}/">{{ student.student }}</a></h3>
+                                    </md-grid-tile-footer>
+                                </md-grid-tile>
+                            </md-grid-list>
+                            <div ng-show="selectedLab == 'all'" ng-repeat="lab in labs">
+                                <h1 class="md-header">{{lab}}</h1>
+                                <md-grid-list  md-col-xs="1" md-cols-sm="2" md-cols-md="6" md-cols-gt-md="6" md-row-height="200px" md-gutter="13px">
+                                    <md-grid-tile class="student_tile" ng-repeat="student in studentsByLab(selectedLab)  | orderBy:'student'" style="background-image: url(http://fabacademy.org/archives/2015/students/{{ student.dir }}/presentation.png)">
+                                        <!-- <md-icon class="icon-large" md-svg-src="/images/user.svg" ></md-icon> -->
+                                        <md-grid-tile-footer>
+                                            <h3><a style="color: white; text-decoration: none" href="http://fabacademy.org/archives/2015/students/{{ student.dir }}/">{{ student.student }}</a></h3>
+                                        </md-grid-tile-footer>
+                                    </md-grid-tile>
+                                </md-grid-list>
+                            </div>
+                            <!-- <h1 class="md-display-2">All sites</h1> -->
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Graduated">
+                        <md-content class="md-padding">
+                            <!-- <h1 class="md-display-2">All sites</h1> -->
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
