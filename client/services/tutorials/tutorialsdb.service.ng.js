@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fabSiteDirectoryApp')
-.factory('tutorialsdb', [ '$http', 'marked', function($http,marked) {
+.factory('tutorialsdb', [ '$http',  function($http) {
 
   // Private API
   var tutorialsService = {};
@@ -18,15 +18,6 @@ angular.module('fabSiteDirectoryApp')
            });
 
        // return tutorialsService.tutorials;
-   };
-
-   tutorialsService.loadTutorial = function(src, cb){
-
-       $http.get(src)
-           .success(function(data) {
-              var html = marked(data);
-              cb(html);
-           });
    };
 
 
